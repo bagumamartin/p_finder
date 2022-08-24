@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1002570919086",
+    "project_id": "p-finder-dev",
+    "storage_bucket": "p-finder-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002570919086:android:7d43dcd51fdb2947ab913f",
+        "android_client_info": {
+          "package_name": "com.mgim.p_finder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002570919086-quh6sb346qjrmoermf9m5up5nrng98as.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgAeZpxSCgckZDa3LATR21x7Buc6v3oa8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1002570919086-quh6sb346qjrmoermf9m5up5nrng98as.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
