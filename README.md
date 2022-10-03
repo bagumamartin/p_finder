@@ -14,3 +14,18 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Sound null safety
+
+The tinder_card dependency doesn't support Sound null safety; so,
+add; "args": [
+                "--no-sound-null-safety"
+                ]
+to the .vscode/launch.json file
+
+## Setting up the min sdk version for firebase
+
+Locate the android/local.properties file,
+Add "flutter.minSdkVersion=21"
+Then locate the android/app/build.gradle file
+Add "minSdkVersion localProperties.getProperty('flutter.minSdkVersion').toInteger()"

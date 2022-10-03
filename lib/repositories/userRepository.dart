@@ -9,6 +9,6 @@ class UserRepository {
   UserRepository({
     required FirebaseAuth firebaseAuth,
     required FirebaseFirestore firebaseFirestore,
-  })  : _firebaseAuth = firebaseAuth ?? FirebaseAuth.instance,
-        _firebaseFirestore = firebaseFirestore ?? FirebaseFirestore.instance;
+  })  : _firebaseAuth = firebaseAuth,
+        _firebaseFirestore = firebaseFirestore;
 }
