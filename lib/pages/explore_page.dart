@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_tindercard/flutter_tindercard.dart';
 import 'package:p_finder/data/explore_json.dart';
 import 'package:p_finder/data/icons.dart';
 import 'package:p_finder/theme/colors.dart';
+import 'package:p_finder/widgets/tinder_card.dart';
 
 class ExplorePage extends StatefulWidget {
   const ExplorePage({super.key});
@@ -15,6 +15,7 @@ class ExplorePage extends StatefulWidget {
 class _ExplorePageState extends State<ExplorePage> {
   List itemsTemp = [];
   int itemsLength = 0;
+  int currentCard = 1;
 
   @override
   void initState() {
@@ -44,6 +45,10 @@ class _ExplorePageState extends State<ExplorePage> {
       child: Container(
         height: size.height,
         child: TinderSwapCard(
+          swipeCompleteCallback: (orientation, index) {
+            currentCard = index;
+            print(currentCard);
+          },
           totalNum: itemsLength,
           maxWidth: size.width,
           maxHeight: size.height * 0.75,
@@ -253,24 +258,27 @@ class _ExplorePageState extends State<ExplorePage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: List.generate(item_icons.length, (index) {
-            return Container(
-              width: item_icons[index]['size'],
-              height: item_icons[index]['size'],
-              decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: white,
-                  boxShadow: [
-                    BoxShadow(
-                      color: grey.withOpacity(0.1),
-                      spreadRadius: 5,
-                      blurRadius: 10,
-                      // changes position of shadow
-                    ),
-                  ]),
-              child: Center(
-                child: SvgPicture.asset(
-                  item_icons[index]['icon'],
-                  width: item_icons[index]['icon_size'],
+            return InkWell(
+              onTap: () => print(itemsTemp[index]['name']),
+              child: Container(
+                width: item_icons[index]['size'],
+                height: item_icons[index]['size'],
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: grey.withOpacity(0.1),
+                        spreadRadius: 5,
+                        blurRadius: 10,
+                        // changes position of shadow
+                      ),
+                    ]),
+                child: Center(
+                  child: SvgPicture.asset(
+                    item_icons[index]['icon'],
+                    width: item_icons[index]['icon_size'],
+                  ),
                 ),
               ),
             );

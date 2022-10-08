@@ -273,7 +273,7 @@ class _ChatPageState extends State<ChatPage> {
                                     width: 20,
                                     height: 20,
                                     decoration: BoxDecoration(
-                                        color: green,
+                                        color: Colors.green,
                                         shape: BoxShape.circle,
                                         border: Border.all(
                                           color: white,
