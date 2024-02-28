@@ -1,19 +1,35 @@
-# p_finder
+# PFinder
 
 Find the love you deserve
 
-## Getting Started
+P Finder is a dating app that helps you connect with compatible matches in the college.
 
-This project is a starting point for a Flutter application.
+## Features:
 
-A few resources to get you started if this is your first Flutter project:
+### Swipe through profiles: 
+Swipe left or right on potential matches based on their profile information and pictures.
+### Detailed profiles: 
+View profiles that include names, ages, and profile pictures.
+### User-friendly interface: 
+The app features an intuitive and easy-to-use interface for a smooth experience.
+Additional Information:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Version: 1.0.0+1
+## Dependencies:
+Flutter
+Firebase (authentication, storage, firestore)
+Flutter BloC (state management)
+Flutter Tindercard (swipe functionality)
+and other related packages for icons, svg support, etc.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Running the app:
+Clone the repository
+Run flutter pub get to install the dependencies
+Run flutter run to start the app
+
+## Notes:
+This is a work in progress and does not include all the features of a full-fledged dating app.
+You will need to replace the placeholder data with your own and configure Firebase for real-time functionality.
 
 ## Sound null safety
 
